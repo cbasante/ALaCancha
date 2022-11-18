@@ -1,0 +1,7 @@
+{
+  "name": "ALaCancha",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
