@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
@@ -20,6 +20,11 @@ const routes: Routes = [
     path: 'team',
     loadChildren: () => import('./team/team.module').then( m => m.TeamPageModule)
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+
 ];
 
 @NgModule({
