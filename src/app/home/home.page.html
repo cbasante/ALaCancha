@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      A La cancha
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,18 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">A La Cancha</ion-title>
     </ion-toolbar>
+
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <ion-button [routerLink]="['/team']">
+      Arma tu equipo
+      <ion-icon slot="end" name="team"></ion-icon>
+    </ion-button>
   </div>
 
-  <ion-button [routerLink]="['/login']">
-    Salir
-    <ion-icon slot="end" name="enter"></ion-icon>
-  </ion-button>
+  <div id="container">
+    <strong>Listo para armar tu equipo?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-button [routerLink]="['/login']">
+      Salir
+      <ion-icon slot="end" name="enter"></ion-icon>
+    </ion-button>
+  </div>
+
+
 
 </ion-content>
