@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>INICIO DE SESIÓN</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,15 +10,12 @@
   <ion-grid>
     <ion-row>
       <ion-col></ion-col>
-      <ion-col class="ion-align-self-center" offset="1">
-          <div style="width: 160px">
-            <ion-img src="https://i.postimg.cc/Bvmj2fvw/ALACANCHAblack.png"></ion-img>
-          </div>
+      <ion-col>
+        <ion-img src="https://i.postimg.cc/Bvmj2fvw/ALACANCHAblack.png"></ion-img>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
   </ion-grid>
-
   <ion-grid></ion-grid>
   <ion-grid></ion-grid>
 
@@ -27,20 +24,26 @@
       <ion-label position="floating">Correo</ion-label>
       <ion-input type="email" ngModel email></ion-input>
       <ion-note slot="helper">Ingresa un correo registrado</ion-note>
-      <ion-note slot="error">Correo no registrado</ion-note>
+      <ion-note slot="error">Correo inválido</ion-note>
     </ion-item>
     <ion-item fill="solid">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" ngModel password></ion-input>
       <ion-note slot="helper">Ingresa tu contraseña</ion-note>
-      <ion-note slot="error">Contraseña invalida</ion-note>
+      <ion-note slot="error">Contraseña inválida</ion-note>
     </ion-item>
   </ion-grid>
 
   <ion-grid>
     <ion-row>
-      <ion-col></ion-col>
-      <ion-col>
+      <a class="no-registrado">¿No tienes cuenta?</a>
+      <a routerLink="/signin">Regístrate</a>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="boton-ingreso">
         <ion-button [routerLink]="['/home']">
           Ingresar
           <ion-icon slot="end" name="enter"></ion-icon>
