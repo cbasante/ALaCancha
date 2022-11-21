@@ -1,40 +1,49 @@
 <ion-header>
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>REGISTRO </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <ion-list>
     <ion-item fill="outline">
       <ion-label>Nombres</ion-label>
       <ion-input></ion-input>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-item fill="outline">
       <ion-label>Apellidos</ion-label>
       <ion-input></ion-input>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-item fill="outline">
       <ion-label>Celular</ion-label>
       <ion-input type="tel"></ion-input>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-item fill="outline">
       <ion-label>Correo</ion-label>
       <ion-input type="email"></ion-input>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-item fill="outline">
       <ion-label>Contraseña</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-label>Fecha nacimiento</ion-label>
     <ion-item fill="outline">
@@ -46,6 +55,7 @@
       </ion-modal>
     </ion-item>
   </ion-list>
+  
   <ion-grid class="botones-signin">
     <ion-button color="danger" routerLink="/main">
       Cancelar
@@ -54,4 +64,5 @@
       Guardar
     </ion-button>
   </ion-grid>
+
 </ion-content>

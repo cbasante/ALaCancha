@@ -1,25 +1,21 @@
 <ion-header>
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>INICIO DE SESIÓN</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid></ion-grid>
-  <ion-grid></ion-grid>
+
   <ion-grid>
     <ion-row>
-      <ion-col></ion-col>
-      <ion-col>
-        <ion-img src="https://i.postimg.cc/Bvmj2fvw/ALACANCHAblack.png"></ion-img>
-      </ion-col>
-      <ion-col></ion-col>
+      <ion-img src="https://i.postimg.cc/Bvmj2fvw/ALACANCHAblack.png"></ion-img>
     </ion-row>
   </ion-grid>
-  <ion-grid></ion-grid>
-  <ion-grid></ion-grid>
 
-  <ion-grid class="ion-justify-content-center">
+  <ion-grid>
     <ion-item fill="solid">
       <ion-label position="floating">Correo</ion-label>
       <ion-input type="email" ngModel email></ion-input>
@@ -35,21 +31,15 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row>
-      <a class="no-registrado">¿No tienes cuenta?</a>
-      <a routerLink="/signin">Regístrate</a>
-    </ion-row>
+    <a class="no-registrado">¿No tienes cuenta?</a>
+    <a routerLink="/signin">Regístrate</a>
   </ion-grid>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col class="boton-ingreso">
-        <ion-button [routerLink]="['/home']">
-          Ingresar
-          <ion-icon slot="end" name="enter"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
+  <ion-grid class="boton-ingreso">
+    <ion-button [routerLink]="['/home']">
+      Ingresar
+      <ion-icon slot="end" name="enter"></ion-icon>
+    </ion-button>
   </ion-grid>
 
 </ion-content>
