@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>CREACIÓN EQUIPO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item counter="true">
+    <ion-label position="floating">Nombre del equipo</ion-label>
+    <ion-input maxlength="20"></ion-input>
+  </ion-item>
+
+  <ion-button shape="round" size="small">Crear jugador</ion-button>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre de jugador</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select placeholder="Posición">
+          <ion-select-option value="Portero">Portero</ion-select-option>
+          <ion-select-option value="Defensa">Defensa</ion-select-option>
+          <ion-select-option value="Mediocampo">Mediocampo</ion-select-option>
+          <ion-select-option value="Delantero">Delantero</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button color="secondary" shape="round" size="small">Agregar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label>
+      <h3>LISTA DE JUGADORES</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo-columna">Nombre</ion-label>
+      <ion-label class="titulo-columna">Posición</ion-label>
+      <ion-label class="titulo-columna" slot="end">Acción</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Christyan Basante</ion-label>
+      <ion-label>Mediocampo</ion-label>
+      <ion-button slot="end" color="danger">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Victor Quiceno</ion-label>
+      <ion-label>Delantero</ion-label>
+      <ion-button slot="end" color="danger">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="success" shape="round" size="small" routerLink="/team">Confirmar equipo</ion-button>
+
+</ion-content>
