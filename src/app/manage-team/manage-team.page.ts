@@ -3,8 +3,8 @@ import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-manage-team',
-  templateUrl: './manage-team.page.html',
-  styleUrls: ['./manage-team.page.scss'],
+  templateUrl: 'manage-team.page.html',
+  styleUrls: ['manage-team.page.scss'],
 })
 export class ManageTeamPage implements OnInit {
 
