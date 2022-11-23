@@ -23,22 +23,12 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
-  },  {
+  },
+  {
     path: 'signin',
     loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
-  },
-  {
-    path: 'create-team',
-    loadChildren: () => import('./create-team/create-team.module').then( m => m.CreateTeamPageModule)
-  },
-  {
-    path: 'manage-team',
-    loadChildren: () => import('./manage-team/manage-team.module').then( m => m.ManageTeamPageModule)
-  },
-  {
-    path: 'search-team',
-    loadChildren: () => import('./search-team/search-team.module').then( m => m.SearchTeamPageModule)
-  },
+  }
+
 
 
 ];

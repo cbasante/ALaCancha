@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>CREACIÓN EQUIPO</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,9 +14,14 @@
     <ion-input maxlength="20"></ion-input>
   </ion-item>
 
-  <ion-button shape="round" size="small">Crear jugador</ion-button>
+  <ion-item>
+    <ion-label position="floating">Máximo de jugadores</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
-  <ion-card>
+  <ion-button shape="round" size="small" class="boton-crear">Crear jugador</ion-button>
+
+  <ion-card class="card-crearJugador">
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Nombre de jugador</ion-label>
@@ -27,11 +35,11 @@
           <ion-select-option value="Delantero">Delantero</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-button color="secondary" shape="round" size="small">Agregar</ion-button>
+      <ion-button color="light" shape="round" size="small" class="boton-agregar">Agregar</ion-button>
     </ion-card-content>
   </ion-card>
 
-  <ion-item>
+  <ion-item class="titulo-lista">
     <ion-label>
       <h3>LISTA DE JUGADORES</h3>
     </ion-label>
@@ -47,14 +55,14 @@
       <ion-label>Christyan Basante</ion-label>
       <ion-label>Mediocampo</ion-label>
       <ion-button slot="end" color="danger">
-        <ion-icon name="trash-bin-outline"></ion-icon>
+        <ion-icon name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-item>
     <ion-item>
       <ion-label>Victor Quiceno</ion-label>
       <ion-label>Delantero</ion-label>
       <ion-button slot="end" color="danger">
-        <ion-icon name="trash-bin-outline"></ion-icon>
+        <ion-icon name="close-circle-outline"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-list>

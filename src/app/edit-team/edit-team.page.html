@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>EDITAR EQUIPO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="item-nombre">
+    <ion-label position="floating">Nombre de equipo</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item class="item-cantidad">
+    <ion-label position="floating">Máximo de jugadores</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-button class="boton-guardar" routerLink="/manage-team">Guardar</ion-button>
+
+</ion-content>

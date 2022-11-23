@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>AGREGAR JUGADOR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="item-nombre">
+    <ion-label position="floating">Nombre de jugador</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item class="item-posicion">
+    <ion-select placeholder="Posición">
+      <ion-select-option value="Portero">Portero</ion-select-option>
+      <ion-select-option value="Defensa">Defensa</ion-select-option>
+      <ion-select-option value="Mediocampo">Mediocampo</ion-select-option>
+      <ion-select-option value="Delantero">Delantero</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-button class="boton-agregar" routerLink="/manage-team">Agregar</ion-button>
+
+</ion-content>
