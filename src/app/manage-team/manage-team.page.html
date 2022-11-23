@@ -1,9 +1,59 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>manage-team</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ALIADOS FC</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="titulo-columna">Nombre</ion-label>
+      <ion-label class="titulo-columna">Posición</ion-label>
+      <ion-label class="titulo-columna" slot="end">Acción</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Agustín Julio</ion-label>
+      <ion-label>Portero</ion-label>
+      <ion-button slot="end" color="danger" routerLink="/manage-team">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alexis Henriquez</ion-label>
+      <ion-label>Defensa</ion-label>
+      <ion-button slot="end" color="danger" routerLink="/manage-team">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Rafael Robayo</ion-label>
+      <ion-label>Mediocampo</ion-label>
+      <ion-button slot="end" color="danger" routerLink="/manage-team">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Marco Peréz</ion-label>
+      <ion-label>Delantero</ion-label>
+      <ion-button slot="end" color="danger" routerLink="/manage-team">
+        <ion-icon name="trash-bin-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      
+    </ion-item>
+  </ion-list>
+
+  <ion-item class="item-busqueda">
+    <ion-label>Buscar jugadores:</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <ion-button>Agregar jugador</ion-button>
+  <ion-button color="warning">Editar equipo</ion-button>
+  <ion-button color="danger">Eliminar equipo</ion-button>
 
 </ion-content>
