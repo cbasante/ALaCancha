@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-team',
-  templateUrl: './team.page.html',
-  styleUrls: ['./team.page.scss'],
+  selector: 'app-search-team',
+  templateUrl: './search-team.page.html',
+  styleUrls: ['./search-team.page.scss'],
 })
-export class TeamPage implements OnInit {
+export class SearchTeamPage implements OnInit {
 
   constructor(private menuCtrl: MenuController) { }
 

@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'manage-team',
     loadChildren: () => import('./manage-team/manage-team.module').then( m => m.ManageTeamPageModule)
   },
+  {
+    path: 'search-team',
+    loadChildren: () => import('./search-team/search-team.module').then( m => m.SearchTeamPageModule)
+  },
 
 
 ];

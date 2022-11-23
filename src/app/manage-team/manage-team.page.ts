@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-manage-team',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageTeamPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuCtrl: MenuController) { }
+
+  salir(){
+  }
 
   ngOnInit() {
+
+    this.enableMenu();
+  }
+
+  ionViewDidEnter(){
+
+    this.enableMenu();
+  }
+
+  enableMenu(){
+    this.menuCtrl.enable(true);
+  }
+
+  onClick(){
+    this.menuCtrl.toggle();
   }
 
 }

@@ -14,6 +14,20 @@ export class HomePage {
   salir(){
   }
 
+  ngOnInit() {
+
+    this.enableMenu();
+  }
+
+  ionViewDidEnter(){
+
+    this.enableMenu();
+  }
+
+  enableMenu(){
+    this.menuCtrl.enable(true);
+  }
+
   onClick(){
     this.menuCtrl.toggle();
   }
