@@ -8,61 +8,49 @@
 </ion-header>
 
 <ion-content>
+  <div [formGroup]="form">
+    <ion-list>
+      <ion-item fill="outline">
+        <ion-label>Nombres</ion-label>
+        <ion-input formControlName="nombres"></ion-input>
+      </ion-item>
+    </ion-list>
 
-  <ion-list>
-    <ion-item fill="outline">
-      <ion-label>Nombres</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item fill="outline">
+        <ion-label>Apellidos</ion-label>
+        <ion-input formControlName="apellidos"></ion-input>
+      </ion-item>
+    </ion-list>
 
-  <ion-list>
-    <ion-item fill="outline">
-      <ion-label>Apellidos</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item fill="outline">
+        <ion-label>Celular</ion-label>
+        <ion-input type="tel" formControlName="celular"></ion-input>
+      </ion-item>
+    </ion-list>
 
-  <ion-list>
-    <ion-item fill="outline">
-      <ion-label>Celular</ion-label>
-      <ion-input type="tel"></ion-input>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item fill="outline">
+        <ion-label>Correo</ion-label>
+        <ion-input type="email" formControlName="correo"></ion-input>
+      </ion-item>
+    </ion-list>
 
-  <ion-list>
-    <ion-item fill="outline">
-      <ion-label>Correo</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item fill="outline">
-      <ion-label>Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-label>Fecha nacimiento</ion-label>
-    <ion-item fill="outline">
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          <ion-datetime id="datetime"></ion-datetime>
-        </ng-template>
-      </ion-modal>
-    </ion-item>
-  </ion-list>
-  
-  <ion-grid class="botones-signin">
-    <ion-button color="danger" routerLink="/main">
-      Cancelar
-    </ion-button>
-    <ion-button routerLink="/home">
-      Guardar
-    </ion-button>
-  </ion-grid>
-
+    <ion-list>
+      <ion-item fill="outline">
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" formControlName="contrasenia"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <ion-grid class="botones-signin">
+      <ion-button color="danger" routerLink="/main">
+        Cancelar
+      </ion-button>
+      <ion-button routerLink="/home" (click)="onSave()">
+        Guardar
+      </ion-button>
+    </ion-grid>
+  </div>
 </ion-content>
