@@ -11,9 +11,7 @@ import { UsuariosService } from '../services/usuarios.service';
 export class SigninPage implements OnInit {
   public form: FormGroup;
   public usuario: usuarios;
-  constructor(
-    public usuariosService: UsuariosService
-  ) { }
+  constructor(public usuariosService: UsuariosService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -39,5 +37,4 @@ export class SigninPage implements OnInit {
     this.usuario.setValues(data);
     this.usuariosService.create(this.usuario);
   }
-
 }

@@ -15,31 +15,32 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid>
-    <ion-item fill="solid">
-      <ion-label position="floating">Correo</ion-label>
-      <ion-input type="email" ngModel email></ion-input>
-      <ion-note slot="helper">Ingresa un correo registrado</ion-note>
-      <ion-note slot="error">Correo inválido</ion-note>
-    </ion-item>
-    <ion-item fill="solid">
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" ngModel password></ion-input>
-      <ion-note slot="helper">Ingresa tu contraseña</ion-note>
-      <ion-note slot="error">Contraseña inválida</ion-note>
-    </ion-item>
-  </ion-grid>
+  <div [formGroup]="form">
+    <ion-grid>
+      <ion-item fill="solid">
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="email" formControlName="correo"></ion-input>
+        <ion-note slot="helper">Ingresa un correo registrado</ion-note>
+        <ion-note slot="error">Correo inválido</ion-note>
+      </ion-item>
+      <ion-item fill="solid">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="contrasenia"></ion-input>
+        <ion-note slot="helper">Ingresa tu contraseña</ion-note>
+        <ion-note slot="error">Contraseña inválida</ion-note>
+      </ion-item>
+    </ion-grid>
 
-  <ion-grid>
-    <a class="no-registrado">¿No tienes cuenta?</a>
-    <a routerLink="/signin">Regístrate</a>
-  </ion-grid>
+    <ion-grid>
+      <a class="no-registrado">¿No tienes cuenta?</a>
+      <a routerLink="/signin">Regístrate</a>
+    </ion-grid>
 
-  <ion-grid class="boton-ingreso">
-    <ion-button color="warning" routerLink="/home">
-      Ingresar
-      <ion-icon slot="end" name="enter"></ion-icon>
-    </ion-button>
-  </ion-grid>
-
+    <ion-grid class="boton-ingreso">
+      <ion-button color="warning" routerLink="/home" (click)="onLogin()">
+        Ingresar
+        <ion-icon slot="end" name="enter"></ion-icon>
+      </ion-button>
+    </ion-grid>
+  </div>
 </ion-content>

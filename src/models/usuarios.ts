@@ -5,6 +5,7 @@ export class usuarios{
     public celular: string;
     public correo: string;
     public contrasenia: string;
+    public token?: string;
     setValues(data: any){
         this.id = data.id;
         this.nombres = data.nombres;
@@ -13,7 +14,9 @@ export class usuarios{
         this.correo = data.correo;
         this.contrasenia = data.contrasenia;
     }
-    
+    setToken(token: string){
+        this.token = token;
+    }
 
     constructor(){
 

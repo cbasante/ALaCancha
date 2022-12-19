@@ -12,8 +12,14 @@ export class UsuariosService {
   constructor(public http: HttpClient) {}
 
   create(data: usuarios){
-    console.log("nombre: "+ data.nombres);
     return this.http.post<usuarios>(this.urlServer, data).subscribe();
   }
+  login(data: usuarios){
+    return this.http.post<usuarios>(this.urlServer + '/login', data).subscribe((res: any)=>{
+      if(res.token){
+        localStorage.setItem('tk', res.token);
+        localStorage.setItem('user', JSON.stringify(res.data));
+      }
+    });
+  }
 }
- 
