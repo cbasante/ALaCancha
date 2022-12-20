@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
     this.menuCtrl.enable(false);
   }
 
-  onLogin(){
+  loguear(){
     this.usuario = new usuarios();
     let data = {
       correo: this.form.get('correo')?.value,
@@ -41,6 +41,14 @@ export class LoginPage implements OnInit {
     this.usuario = new usuarios();
     this.usuario.setValues(data);
     this.usuariosService.login(this.usuario);
+
+    if(localStorage.getItem('tk') == null || localStorage.getItem('tk') == undefined || localStorage.getItem('tk') == "" || localStorage.getItem('tk').length == 0){
+      console.log("NO EXISTE");
+      this.router.navigate(['login'])
+    }else{
+      console.log("EXISTE");
+      this.router.navigate(['home'])
+    }
   }
 
 }

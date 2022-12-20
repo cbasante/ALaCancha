@@ -14,7 +14,7 @@ export class HomePage {
   constructor(private menuCtrl: MenuController) {
     let data: any;
     if(localStorage.getItem('user')){
-      //data = JSON.parse(localStorage.getItem('user'));
+      data = JSON.parse(localStorage.getItem('user'));
       this.usuario.setValues(data);
     }
   }

@@ -24,7 +24,7 @@ export class SigninPage implements OnInit {
     });
   }
 
-  onSave(){
+  crear(){
     this.usuario = new usuarios();
     let data = {
       nombres : this.form.get('nombres')?.value,
