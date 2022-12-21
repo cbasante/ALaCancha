@@ -8,17 +8,19 @@
 </ion-header>
 
 <ion-content>
+  <div [formGroup]="form">
+    <ion-item class="item-nombre">
+      <ion-label position="floating">Nombre de equipo</ion-label>
+      <ion-input formControlName="nombre" [(ngModel)]="equipo.nombre" ></ion-input>
+    </ion-item>
+    
+    <ion-item class="item-cantidad">
+      <ion-label position="floating">Descripción de equipo</ion-label>
+      <ion-input formControlName="descripcion" [(ngModel)]="equipo.descripcion" ></ion-input>
+    </ion-item>
 
-  <ion-item class="item-nombre">
-    <ion-label position="floating">Nombre de equipo</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-button class="boton-guardar" (click)="actualizar()">Actualizar</ion-button>
+  </div>
   
-  <ion-item class="item-cantidad">
-    <ion-label position="floating">Máximo de jugadores</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
-
-  <ion-button class="boton-guardar" routerLink="/manage-team">Guardar</ion-button>
 
 </ion-content>

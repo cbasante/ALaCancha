@@ -48,6 +48,10 @@ const routes: Routes = [
     path: 'edit-team',
     loadChildren: () => import('./edit-team/edit-team.module').then( m => m.EditTeamPageModule)
   },
+  {
+    path: 'edit-team/edit/:equipoId',
+    loadChildren: () => import('./edit-team/edit-team.module').then( m => m.EditTeamPageModule)
+  },
 
 
 ];

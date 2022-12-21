@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { create } from 'domain';
 import { usuarios } from 'src/models/usuarios';
 
 @Injectable({
@@ -9,6 +8,7 @@ import { usuarios } from 'src/models/usuarios';
 })
 export class UsuariosService {
   public urlServer = environment.url + '/usuarios';
+  
   constructor(public http: HttpClient) {}
 
   create(data: usuarios){

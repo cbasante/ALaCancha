@@ -14,28 +14,27 @@
 
   <ion-item>
     <ion-label>
-      <h3>LISTA DE EQUIPOS DONDE ERES EL CAPITÁN</h3>
+      <h3>LISTA DE EQUIPOS</h3>
     </ion-label>
   </ion-item>
 
   <ion-list>
     <ion-item>
       <ion-label class="titulo-columna">Nombre</ion-label>
-      <ion-label class="titulo-columna">Jugadores</ion-label>
+      <ion-label class="titulo-columna">Descripción</ion-label>
       <ion-label class="titulo-columna" slot="end">Opciones</ion-label>
     </ion-item>
-    <ion-item>
-      <ion-label>Aliados FC</ion-label>
-      <ion-label>4/5</ion-label>
-      <ion-button slot="end" color="success" routerLink="/manage-team">
-        <ion-icon name="construct-outline"></ion-icon>
-      </ion-button>
+    <ion-item *ngFor="let equipo of equipo | async">
+      <ion-label>{{equipo.nombre}}</ion-label>
+      <ion-label>{{equipo.descripcion}}</ion-label>
+      <ion-button slot="end" color="warning" [routerLink]="['/','edit-team', 'edit', equipo.id]">Editar</ion-button>
+      <ion-button slot="end" color="danger" (click)="eliminar(equipo.id)">Eliminar</ion-button>
     </ion-item>
   </ion-list>
 
-<ion-button class="boton-crear" routerLink="/create-team">Crear equipo</ion-button>
+  <ion-button class="boton-crear" routerLink="/create-team">Crear equipo</ion-button>
 
-<ion-item>
+<!--<ion-item>
   <ion-label>
     <h3>LISTA DE EQUIPOS DONDE ERES JUGADOR</h3>
   </ion-label>
@@ -47,6 +46,6 @@
   </ion-item>
 </ion-list>
 
-<ion-button class="boton-buscar" color="warning">Buscar equipo</ion-button>
+<ion-button class="boton-buscar" color="warning">Buscar equipo</ion-button>-->
 
 </ion-content>

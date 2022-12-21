@@ -20,7 +20,6 @@ export class SigninPage implements OnInit {
       celular: new FormControl(''),
       correo: new FormControl(''),
       contrasenia: new FormControl(''),
-
     });
   }
 
